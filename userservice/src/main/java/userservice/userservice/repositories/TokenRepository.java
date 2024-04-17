@@ -9,7 +9,7 @@ import userservice.userservice.models.Token;
 import userservice.userservice.models.User;
 
 @Repository
-public interface TokenRepository extends JpaRepository<User,Long> {
+public interface TokenRepository extends JpaRepository<Token,Long> {
     Token save(Token token);
 
     Optional<Token> findByValueAndDeletedEquals(String value,boolean deleted);
